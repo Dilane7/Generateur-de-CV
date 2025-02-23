@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/tailwind.css">
+</head>
+<body>
+    <h1 class="bg-dilane">bonjour</h1>
+    <section class="flex items-center">
+        <!-- parie formulaire -->
+        <div class="w-1/2 h-full bg-[#f2f4f7] px-10 ">
+            <!-- Accordion Item 1 -->
+            <div class="border-t-1 border-b-1  px-4 border-gray-300 mt-3  bg-[#f5f7fb] shadow-sm shadow-blue-400/50">   
+                <button onclick="toggleAccordion(1)" class="w-full flex justify-between  items-center px-5 py-5 ">
+                    <h1 class="text-3xl ">
+                        Informations personnelle
+                    </h1>
+                    <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-1" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="flex flex-col w-full  pt-2">
+                        <div class="flex justify-between w-full gap-10 ">
+                            <div class="">
+                                <label for="photo" class="font-bold text-gray-500">Photo</label> <br>
+                                <input type="file" class="border-1 w-[130px] h-[120px]">
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between w-full gap-4 ">
+                                    <div class="w-1/2">
+                                        <label for="nom" class="font-bold text-gray-500">Nom</label> <br>
+                                        <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    </div>
+                                    <div class="w-1/2">
+                                        <label for="prenom" class="font-bold text-gray-500">prenom</label> <br>
+                                        <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label for="titre_du_poste" class="font-bold text-gray-500">Titre</label>
+                                    <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between w-full gap-4 mt-4">
+                            <div class="w-1/2">
+                                <label for="titre_du_poste" class="font-bold text-gray-500">Adresse e-mail</label> <br>
+                                <input type="email" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                            </div>
+                            <div class="w-1/2">
+                                <label for="titre_du_poste" class="font-bold text-gray-500">Numero de telephone</label> <br>
+                                <input type="tel" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label for="Adresse" class="font-bold text-gray-500">Adresse</label>
+                            <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                        </div>
+                        <div class="flex justify-between w-full gap-4 mt-4">
+                            <div class="w-1/2">
+                                <label for="date_naissance" class="font-bold text-gray-500">Date de naissance</label> <br>
+                                <input type="date" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                            </div>
+                            <div class="w-1/2">
+                                <label for="sexe" class="font-bold text-gray-500">Sexe</label> <br>
+                                <select name="sexe" id="sexe" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    <option value="homme" >Homme</option>
+                                    <option value="femme">Femme</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex justify-between w-full gap-4 mt-4">
+                            <div class="w-1/2">
+                                <label for="nationalite" class="font-bold text-gray-500">Nationalite</label>
+                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                            </div>
+                            <div class="w-1/2">
+                                <label for="etat_civil" class="font-bold text-gray-500">Etat civil</label> <br>
+                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="border-t-1 border-b-1  px-4 border-gray-300 mt-3  bg-[#f5f7fb] shadow-sm shadow-blue-400/50">
+                <button onclick="toggleAccordion(2)" class="w-full flex justify-between  items-center px-5 py-5 text-slate-800">
+                    <h1 class="text-3xl ">
+                        Profil
+                    </h1>
+                    <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-2" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="flex flex-col w-full  pt-2">
+                        <label for="description_profil">Description</label>
+                        <textarea name="description_profil" id="description_profil" rows="8" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="border-t-1 border-b-1  px-4 border-gray-300 mt-3  bg-[#f5f7fb] shadow-sm shadow-blue-400/50">
+                <button onclick="toggleAccordion(3)" class="w-full flex justify-between  items-center px-5 py-5 text-slate-800">
+                    <h1 class="text-3xl ">
+                        Formation
+                    </h1>
+                    <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-3" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="flex flex-col w-full  pt-2">
+                        <label for=""></label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+        <!-- partie visuel -->
+        <div class="w-1/2 h-full">
+
+        </div>
+    </section>
+
+<script src="../javascript/cv.js"></script>
+</body>
+</html>
