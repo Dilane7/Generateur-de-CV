@@ -5,12 +5,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/tailwind.css">
     <link rel="stylesheet" href="../css/cv.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <h1 class="bg-dilane ">bonjour</h1>
-    <section class="flex items-center">
+    <header class="h-20 w-full flex justify-between items-center bg-blue-500 px-10 shadow-lg fixed">
+        <div>
+            <button class="flex justify-between items-center border-2 border-white gap-2 px-2 rounded">
+                <div>
+                    <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M177.5 414c-8.8 3.8-19 2-26-4.6l-144-136C2.7 268.9 0 262.6 0 256s2.7-12.9 7.5-17.4l144-136c7-6.6 17.2-8.4 26-4.6s14.5 12.5 14.5 22l0 72 288 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-288 0 0 72c0 9.6-5.7 18.2-14.5 22z"/></svg>
+                </div>
+                <div class="text-white text-xl">
+                    Retour
+                </div>
+            </button>
+        </div>
+        <div>
+            <h2 class="text-white text-2xl font-bold">CV</h2>
+        </div>
+        <div>
+            <button class="flex justify-between items-center border-2 border-white gap-2 px-2 rounded">
+                <div>
+                    <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
+                </div>
+                <div class="text-white text-xl">
+                    Telecharger
+                </div>
+            </button>
+        </div>
+    </header>
+    
+    <section class="flex items-center pt-18">
         <!-- parie formulaire (information personnelle)-->
         <div class="w-1/2  bg-[#f2f4f7] px-10 pt-3 pb-8  overflow-y-scroll h-screen">
+            <div class="mt-4 mb-6">
+                <h1 class="text-4xl font-bold italic">CV <span class="text-blue-500 text-4xl italic">Builder</span></h1>
+            </div>
             <!-- Accordion Item 1 -->
             <div class="border-t-1 border-b-1  px-4 border-gray-300 mt-3  bg-[#f5f7fb] shadow-sm shadow-blue-400/50">   
                 <button onclick="toggleAccordion(1)" class="w-full flex justify-between  items-center px-5 py-5 ">
@@ -26,12 +55,21 @@
                 <div id="content-1" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
                     <div class="flex flex-col w-full  pt-2 pb-5 border-y-1 border-gray-400  mt-3">
                         <div class="flex justify-between w-full gap-10 ">
-                            <div class="">
+                            <div class=" flex flex-col gap-3">
+                                <div>
                                 <label for="photo" class="font-bold text-gray-500">Photo</label> <br>
-                                <input type="file" class="border-1 w-[130px] h-[120px]">
+                                <input type="file" id="imageInput" style="display: none ;" accept="image/*" class="border-1 w-[130px]">
+                                <img id="imagePreview" src="../images/profil.png" class="w-[120px] h-[120px]" alt="Aperçu de l'image"> <br>
                             </div>
-                            <div class="w-full">
-                                <div class="flex justify-between w-full gap-4 ">
+                                <div class="border border-blue-400/50 w-[130px] flex justify-items-center py-1  ">
+                                    <div class="px-4"><svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg></div>
+                                    <div class="px-2">
+                                        <label for="imageInput" class="text-center text-gray-600">Importer</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full items-center">
+                                <div class="flex justify-between w-full gap-4 mb-10">
                                     <div class="w-1/2">
                                         <label for="nom" class="font-bold text-gray-500">Nom</label> <br>
                                         <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
@@ -152,7 +190,14 @@
                                 <textarea name="description_exp" id="description_exp" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
                             </div> 
                         </div>
-                        <button class="border-1 rounded-full px-3 my-4 h-8">Ajouter une experience professionnelle</button>
+                        <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                            <div>
+                                <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                            </div>
+                            <div class="px-3">
+                                Ajouter une experience professionnelle
+                            </div>
+                        </button>
                     </div>
             </div>
             
@@ -200,7 +245,14 @@
                             <textarea name="description_for" id="description_formation" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
                         </div> 
                     </div>
-                    <button class="border-1 rounded-full px-3 my-4 h-8">Ajouter une formation</button>
+                    <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                        <div>
+                            <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                        </div>
+                        <div class="px-3">
+                            Ajouter une formation
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -236,7 +288,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="border-1 rounded-full px-3 my-4 h-8">Ajouter une Compétence</button>
+                    <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                        <div>
+                            <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                        </div>
+                        <div class="px-3">
+                            Ajouter une Compétence
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -260,7 +319,14 @@
                             <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                         </div>
                     </div>
-                    <button class="border-1 rounded-full px-3 my-4 h-8">Ajouter un Centres d’intérêt</button>
+                    <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                        <div>
+                            <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                        </div>
+                        <div class="px-3">
+                            Ajouter un Centres d’intérêt
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -310,7 +376,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="border-1 rounded-full px-3 my-4 h-8">Ajouter une Référence</button>
+                    <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                        <div>
+                            <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                        </div>
+                        <div class="px-3">
+                            Ajouter une Référence
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -347,7 +420,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="border-1 rounded-full px-3 my-4 h-8">Ajouter une langue</button>
+                    <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                        <div>
+                            <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                        </div>
+                        <div class="px-3">
+                            Ajouter une langue
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -357,7 +437,7 @@
 
         <!-- partie visuel -->
         <div class="w-1/2 h-full">
-
+            
         </div>
     </section>
 

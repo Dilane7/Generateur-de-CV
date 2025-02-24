@@ -25,4 +25,23 @@ function toggleAccordion(index) {
         icon.innerHTML = downSVG;
     }
 }
+
+const imageInput = document.getElementById('imageInput');
+const imagePreview = document.getElementById('imagePreview');
+
+imageInput.addEventListener('change', (event) => {
+  const file = event.target.files[0]; // Récupérer le fichier sélectionné
+
+  if (file) {
+    const reader = new FileReader(); // Créer un objet FileReader pour lire le contenu du fichier
+
+    reader.onload = (e) => {
+      imagePreview.src = e.target.result; // Définir l'attribut src de l'image avec les données du fichier
+    }
+
+    reader.readAsDataURL(file); // Lire le contenu du fichier en tant que URL de données
+  } else {
+    imagePreview.src = '#'; // Réinitialiser l'image si aucun fichier n'est sélectionné
+  }
+});
       
