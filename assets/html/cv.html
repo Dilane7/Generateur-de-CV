@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="../css/cv.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="overflow-hidden">
     <header class="h-20 w-full flex justify-between items-center bg-blue-500 px-10 shadow-lg fixed">
         <div>
-            <button class="flex justify-between items-center border-2 border-white gap-2 px-2 rounded">
+            <a class="flex justify-between items-center border-2 border-white gap-2 px-2 rounded" href="index.html">
                 <div>
                     <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M177.5 414c-8.8 3.8-19 2-26-4.6l-144-136C2.7 268.9 0 262.6 0 256s2.7-12.9 7.5-17.4l144-136c7-6.6 17.2-8.4 26-4.6s14.5 12.5 14.5 22l0 72 288 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-288 0 0 72c0 9.6-5.7 18.2-14.5 22z"/></svg>
                 </div>
                 <div class="text-white text-xl">
                     Retour
                 </div>
-            </button>
+            </a>
         </div>
         <div>
             <h2 class="text-white text-2xl font-bold">CV</h2>
@@ -35,7 +35,7 @@
     </header>
     
     <section class="flex items-center pt-18">
-        <!-- parie formulaire (information personnelle)-->
+        <!-- parie formulaire (information personnelle)--> 
         <div class="w-1/2  bg-[#f2f4f7] px-10 pt-3 pb-8  overflow-y-scroll h-screen">
             <div class="mt-4 mb-6">
                 <h1 class="text-4xl font-bold italic">CV <span class="text-blue-500 text-4xl italic">Builder</span></h1>
@@ -64,24 +64,18 @@
                                 <div class="border border-blue-400/50 w-[130px] flex justify-items-center py-1  ">
                                     <div class="px-4"><svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg></div>
                                     <div class="px-2">
-                                        <label for="imageInput" class="text-center text-gray-600">Importer</label>
+                                        <label id="btn_importer" for="imageInput" class="text-center text-gray-600">Importer</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="w-full items-center">
-                                <div class="flex justify-between w-full gap-4 mb-10">
-                                    <div class="w-1/2">
-                                        <label for="nom" class="font-bold text-gray-500">Nom</label> <br>
-                                        <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
-                                    </div>
-                                    <div class="w-1/2">
-                                        <label for="prenom" class="font-bold text-gray-500">prenom</label> <br>
-                                        <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
-                                    </div>
+                                <div class="w-full">
+                                    <label for="nom" class="font-bold text-gray-500">Nom</label> <br>
+                                    <input id="nom" placeholder="Nom complet" type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                                 </div>
                                 <div class="mt-4">
                                     <label for="titre_du_poste" class="font-bold text-gray-500">Titre</label>
-                                    <input type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    <input id="titre" type="text" class=" w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                                 </div>
                             </div>
                         </div>
@@ -141,7 +135,7 @@
                 <div id="content-2" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
                     <div class="flex flex-col w-full  pt-2 border-t-1 border-gray-400  mt-3">
                         <label for="description_profil" class="font-bold text-gray-500">Description</label>
-                        <textarea name="description_profil" id="description_profil" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
+                        <textarea id="description_profil" name="description_profil" id="description_profil" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
                     </div>
                 </div>
             </div>
@@ -163,31 +157,31 @@
                         <div class="flex flex-col w-full border-y-1 border-gray-400 py-4 mt-3">
                             <div class="flex flex-col w-full pt-1">
                                 <label for="" class="font-bold text-gray-500">Poste</label>
-                                <input name="poste" id="description_profil" class=" w-full rounded-lg px-4 h-[40px] bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></input>
+                                <input name="poste" id="exp_name" class=" w-full rounded-lg px-4 h-[40px] bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></input>
                             </div> 
                             <div class="flex justify-between w-full gap-4 mt-4">
                                 <div class="w-1/2">
                                     <label for="employeur" class="font-bold text-gray-500">Employeur</label>
-                                    <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    <input id="employeur" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                                 </div>
                                 <div class="w-1/2">
                                     <label for="ville" class="font-bold text-gray-500">Ville</label> <br>
-                                    <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    <input id="ville_exp" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                                 </div>
                             </div>
                             <div class="flex justify-between w-full gap-4 mt-4">
                                 <div class="w-1/2">
                                     <label for="" class="font-bold text-gray-500">Date de debut</label>
-                                    <input type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    <input id="debut_exp" type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                                 </div>
                                 <div class="w-1/2">
                                     <label for="" class="font-bold text-gray-500">Date de fin</label> <br>
-                                    <input type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                    <input id="fin_exp" type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                                 </div>
                             </div>
                             <div class="flex flex-col w-full  py-2">
                                 <label for="" class="font-bold text-gray-500">Description</label>
-                                <textarea name="description_exp" id="description_exp" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
+                                <textarea id="exp_description" name="description_exp" id="description_exp" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
                             </div> 
                         </div>
                         <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
@@ -218,31 +212,31 @@
                     <div class="flex flex-col w-full border-y-1 border-gray-400 py-4 mt-3">
                         <div class="flex flex-col w-full pt-1">
                             <label for="" class="font-bold text-gray-500">Formation</label>
-                            <input name="poste" id="description_profil" class=" w-full rounded-lg px-4 h-[40px] bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></input>
+                            <input id="formation" name="poste" id="description_profil" class=" w-full rounded-lg px-4 h-[40px] bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></input>
                         </div> 
                         <div class="flex justify-between w-full gap-4 mt-4">
                             <div class="w-1/2">
-                                <label for="employeur" class="font-bold text-gray-500">Etablisement</label>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <label for="" class="font-bold text-gray-500">Etablisement</label>
+                                <input id="etablisement" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                             <div class="w-1/2">
                                 <label for="ville_for" class="font-bold text-gray-500">Ville</label> <br>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="ville_formation " type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                         </div>
                         <div class="flex justify-between w-full gap-4 mt-4">
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Date de debut</label>
-                                <input type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="debut_formation" type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Date de fin</label> <br>
-                                <input type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="fin_formation" type="date" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                         </div>
                         <div class="flex flex-col w-full  py-2">
                             <label for="" class="font-bold text-gray-500">Description</label>
-                            <textarea name="description_for" id="description_formation" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
+                            <textarea id="for_description" name="description_for" id="description_formation" rows="5" class=" w-full rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50"></textarea>
                         </div> 
                     </div>
                     <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
@@ -270,7 +264,8 @@
                         </span>
                 </button>
                 <div id="content-5" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="flex flex-col w-full border-1 rounded-2xl border-gray-400 p-4 mt-3">
+                    <div id="competences-container">
+                    <div  class="flex flex-col w-full border-1 rounded-2xl border-gray-400 p-4 mt-3">
                          <div class="flex justify-between w-full gap-4 my-4">
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Compétence</label>
@@ -288,7 +283,8 @@
                             </div>
                         </div>
                     </div>
-                    <button class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
+                </div>
+                    <button id="add-competence" class="border-1 rounded-full px-3 my-4 h-8 flex justify-between items-center">
                         <div>
                             <svg  height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                         </div>
@@ -345,34 +341,28 @@
                 </button>
                 <div id="content-7" class="max-h-0 pb-3 overflow-hidden transition-all duration-300 ease-in-out">
                     <div class="flex flex-col w-full border-1 rounded-2xl border-gray-400 p-4 mt-3">
-                        <div class="flex justify-between w-full gap-4 my-4">
-                            <div class="w-1/2">
-                                <label for="" class="font-bold text-gray-500">Nom</label>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
-                            </div>
-                            <div class="w-1/2">
-                                <label for="" class="font-bold text-gray-500">Poste</label> <br>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
-                            </div>
+                        <div class="w-full">
+                            <label for="" class="font-bold text-gray-500">Nom</label>
+                            <input id="ref_name" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                         </div>
                         <div class="flex justify-between w-full gap-4 my-4">
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Entreprise</label>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="ref_emp" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Ville</label> <br>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="ref_ville" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                         </div>
                         <div class="flex justify-between w-full gap-4 my-4">
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Numéro de téléphone</label>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="num_ref" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                             <div class="w-1/2">
                                 <label for="" class="font-bold text-gray-500">Adresse e-mail</label> <br>
-                                <input type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
+                                <input id="email_ref" type="text" class="w-full h-[40px] rounded-lg px-4 bg-white shadow-sm border border-blue-400/50 shadow-blue-400/50">
                             </div>
                         </div>
                     </div>
@@ -436,8 +426,143 @@
 
 
         <!-- partie visuel -->
-        <div class="w-1/2 h-full">
-            
+        <div class="w-1/2 bg-[#f2f1ed] px-10 pt-3 pb-8 overflow-y-scroll h-screen">
+            <div class="flex w-full h-full mt-10  bg-[white] rounded-2xl">
+                <!-- ligne bleu -->
+                <div class="bg-blue-500 w-[30px] h-full rounded-tl-2xl rounded-bl-2xl">
+                    .............
+                </div>
+
+                <!-- la barre contenant la photo  -->
+                <div class="bg-blue-100 w-[240px] h-full flex flex-col">
+                    <div class="pt-10 pb-2 flex justify-center">
+                        <img id="image_cv" class="h-[130px] w-[130px]" src="../images/profil.png" alt="">
+                    </div>
+                    <div class="px-5  pb-2">
+                        <h1 class="text-2xl text-blue-500 font-bold">Informations personnelles</h1>
+                        <div class="border-b-1 border-gray-400 pt-3"></div>
+                    </div>
+
+                    <div >
+                        <div class="grid grid-flow-col grid-rows-2 px-5 gap-2 ">
+                            <div>
+                                <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#2b80ff" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+                            </div>
+                            <div>
+                                <h1>Dilane Tiwa Tsague</h1>
+                            </div>
+                               
+                        </div>
+                    </div>
+                    <div class="grid grid-flow-col grid-rows-2 px-5 gap-2 ">
+                        <div>
+                            <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#2b80ff" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+                        </div>
+                        <div>
+                            <h1>Dilane Tiwa Tsague</h1>
+                        </div>
+                           
+                    </div>
+
+                    <div class="flex justify-between px-5 mb-2">
+                        <div>
+                            <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#2b80ff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                        </div>
+                        <div>
+                            <h1>tsaguedilane7@gmail.com</h1>
+                        </div>
+                    </div>
+                    <div class="flex  justify-between px-5 mb-2 gap-2 ">
+                        <div>
+                            <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#2b80ff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                        </div>
+                        <div class="pr-5">
+                            <h1 >tsaguedilane7@gmail.com</h1>
+                        </div>
+                    </div>
+                    <div class="flex  justify-center px-5  gap-2">
+                        <div>
+                            <svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#2b80ff" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"/></svg>
+                        </div>
+                        <div>
+                            <h1>695746380</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- contenue profil et autre  -->
+                <div class="flex flex-col  px-8 pt-10">
+                    <div class="mb-5">
+                        <h1 id="text_nom" class="text-blue-500 text-4xl font-bold"></h1>
+                        <h3 id="titre_text" class="text-lg"></h3>
+                    </div>
+                    <div class="mb-5">
+                        <div class="border-b-1 border-gray-400  pb-2 mb-2">
+                            <h1 class="text-blue-500 text-2xl font-bold ">Profil</h1>
+                        </div>
+                        <p id="content_profil_description" class="text-md">
+                        </p>
+                    </div>
+                    <div class="mb-4">
+                        <div class="border-b-1 pb-2 mb-2 border-gray-400 ">
+                            <h1 class="text-blue-500 text-2xl font-bold ">Formation</h1>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p id="content_formation_name" class="font-bold"></p>
+                            </div>
+                            <div class="inline-flex gap-1">
+                               <p id="content_debut_formation" class="text-blue-500"> </p> <p class="text-blue-500" id="content_fin_formation"></p>
+                            </div>
+                        </div>
+                        <div class="inline-flex gap-1">
+                            <p id="content_etablisement" class="text-blue-500"></p>
+                            <p id="content_ville_formation" class="text-blue-500"></p>
+                        </div>
+                        <div>
+                            <p id="content_for_description" class="text-md"></p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="border-b-1 pb-2 mb-2 border-gray-400 ">
+                            <h1 class="text-blue-500 text-2xl font-bold ">Expériences professionnelles</h1>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <p id="content_exp_name" class="font-bold"></p>
+                            </div>
+                            <div class="inline-flex gap-1">
+                                <p id="content_debut_exp" class="text-blue-500"> </p> <p class="text-blue-500" id="content_fin_exp"></p>
+                             </div>
+                        </div>
+                        <div class="inline-flex gap-1">
+                            <p id="content_employeur" class="text-blue-500"></p>
+                            <p id="content_ville_exp" class="text-blue-500"></p>
+                        </div>
+                        <div>
+                            <p id="content_exp_description" class="text-md">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="border-b-1 pb-2 mb-2 border-gray-400 ">
+                            <h1 class="text-blue-500 text-2xl font-bold ">References</h1>
+                        </div>
+                        <div>
+                            <p id="content_ref_name" class="font-bold"></p>
+                        </div>
+                        <div class="inline-flex gap-1">
+                            <p id="content_ref_emp" class="text-blue-500"></p>
+                            <p id="content_ref_ville" class="text-blue-500"></p>
+                        </div>
+                        <div class="inline-flex gap-1">
+                            <p id="content_num_ref"></p>
+                            <p id="content_email_ref"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </section>
 
