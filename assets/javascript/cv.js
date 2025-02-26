@@ -28,6 +28,9 @@ function toggleAccordion(index) {
 
 const imageInput = document.getElementById('imageInput');
 const imagePreview = document.getElementById('imagePreview');
+const image_cv = document.getElementById('image_cv');
+const inn = document.getElementById('imageInput');
+
 
 imageInput.addEventListener('change', (event) => {
   const file = event.target.files[0]; // Récupérer le fichier sélectionné
@@ -37,12 +40,16 @@ imageInput.addEventListener('change', (event) => {
 
     reader.onload = (e) => {
       imagePreview.src = e.target.result; // Définir l'attribut src de l'image avec les données du fichier
+      image_cv.src = e.target.result; 
     }
 
     reader.readAsDataURL(file); // Lire le contenu du fichier en tant que URL de données
   } else {
     imagePreview.src = '#'; // Réinitialiser l'image si aucun fichier n'est sélectionné
   }
+});
+inn.addEventListener('change', function(){
+  // const srcim = 
 });
 
 
@@ -76,13 +83,29 @@ imageInput.addEventListener('change', (event) => {
 
 const nom = document.getElementById('nom');
 const text_nom = document.getElementById('text_nom');
+const nom2 = document.getElementById('nom2');
 const titre = document.getElementById('titre');
 const titre_text = document.getElementById('titre_text');
 const description_profil = document.getElementById('description_profil');
 const content_profil_description = document.getElementById('content_profil_description');
-const image = document.getElementById('imagePreview');
-const image_cv = document.getElementById('image_cv');
-const btn_importer = document.getElementById('btn_importer');
+
+const email = document.getElementById('email');
+const content_email = document.getElementById('content_email');
+const num = document.getElementById('num');
+const content_num = document.getElementById('content_num');
+const ville = document.getElementById('ville');
+const content_ville = document.getElementById('content_ville');
+const naiss = document.getElementById('naiss');
+const content_naiss = document.getElementById('content_naiss');
+const sexe = document.getElementById('sexe');
+const content_sexe = document.getElementById('content_sexe');
+const national = document.getElementById('national');
+const content_national = document.getElementById('content_national');
+const statut = document.getElementById('statut');
+const content_statut = document.getElementById('content_statut');
+
+
+
 
 
 const formation_name = document.getElementById('formation');
@@ -123,8 +146,52 @@ const email_ref = document.getElementById('email_ref');
 const content_email_ref = document.getElementById('content_email_ref');
 
 
+num.addEventListener('input', function(){
+  const valeur_num = num.value;
+  content_num.textContent = valeur_num;
+});
+
+email.addEventListener('input', function(){
+  const valeur_email = email.value;
+  content_email.textContent = valeur_email;
+});
+
+ville.addEventListener('input', function(){
+  const valeur_ville = ville.value;
+  content_ville.textContent = valeur_ville;
+});
+
+naiss.addEventListener('input', function(){
+  const valeur_naiss = naiss.value;
+  content_naiss.textContent = valeur_naiss;
+});
+
+sexe.addEventListener('input', function(){
+  const valeur_sexe = sexe.value;
+  content_sexe.textContent = valeur_sexe;
+});
+
+national.addEventListener('input', function(){
+  const valeur_national = national.value;
+  content_national.textContent = valeur_national;
+});
+
+statut.addEventListener('input', function(){
+  const valeur_statut = statut.value;
+  content_statut.textContent = valeur_statut;
+});
+
+
+nom.addEventListener('blur', function(){
+  if(nom.value === ""){
+    nom.style.border = "red";
+    alert('veuilez remplir votre')
+  }
+});
+
 nom.addEventListener('input', function(){
   const valeur_nom = nom.value;
+  nom2.textContent=valeur_nom; 
   text_nom.textContent = valeur_nom;
 });
 
@@ -232,3 +299,11 @@ email_ref.addEventListener('input', function(){
   const valeur_email_ref = email_ref.value;
   content_email_ref.textContent = `${valeur_email_ref}`;
 });
+
+function verifier(){
+  if(nom.value ===""){
+    alert("le champs nom est vide")
+    nom.style.border = "red";
+  }
+  
+}
